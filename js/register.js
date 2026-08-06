@@ -114,12 +114,12 @@ async function registrarUsuario(e){
 
         console.log("Documento creado correctamente");
 
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
 
 
 
         mensaje.textContent = "¡Cuenta creada correctamente!";
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
 
     }
 
