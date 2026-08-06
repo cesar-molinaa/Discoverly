@@ -32,11 +32,11 @@ if (userSession) {
 
         if (auth.currentUser) {
 
-            window.location.href = "profile.html";
+            window.location.href = "html/profile.html";
 
         } else {
 
-            window.location.href = "login.html";
+            window.location.href = "html/login.html";
 
         }
 

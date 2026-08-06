@@ -389,7 +389,7 @@ async function cerrarSesion() {
 
         await signOut(auth);
 
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
 
     } catch (error) {
 
