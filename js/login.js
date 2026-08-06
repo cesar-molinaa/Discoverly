@@ -46,12 +46,10 @@ async function iniciarSesion(e) {
 
     e.preventDefault();
 
-        console.log("Botón pulsado");
 
     const email = emailInput.value.trim();
     const password = passwordInput.value;
 
-    console.log(email, password);
 
     if (!email || !password) {
 
@@ -69,8 +67,6 @@ async function iniciarSesion(e) {
         );
 
         mensaje.textContent = "¡Has iniciado sesión!";
-
-        console.log("Sesión iniciada");
 
 
         emailInput.value = "";

@@ -66,8 +66,8 @@ header{
 
 .logo{
 
-    width: 4em;
-    height:4em;
+    width: 3em;
+    height:3em;
 
     transition:  1s ease;
 }
@@ -90,7 +90,7 @@ header{
 
 .brand p{
     font-weight: 500;
-     font-size: 1.8em;
+     font-size: 1.4em;
      color: #F8FAFC;
 }
 
@@ -112,7 +112,7 @@ header{
      text-decoration: none;
      color: #F8FAFC;
      font-weight: 500;
-     font-size: 1.3em;
+     font-size: 1em;
     
      transition: color .2s;
 }
@@ -145,8 +145,8 @@ header{
 }
 
 .header-lupa, .header-user, .menu-toggle{
-    width: 3em;
-    height:3em;
+    width: 2em;
+    height:2em;
     background-color: transparent;
     color: #F8FAFC;
 }
@@ -157,7 +157,7 @@ header{
 .user-session {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     cursor: pointer;
 }
 
@@ -229,7 +229,7 @@ header.scrolled{
     text-decoration: none;
      color: #F8FAFC;
      font-weight: 500;
-     font-size: 1.3em;
+     font-size: 1em;
     
      transition: color .2s;
 }
@@ -247,7 +247,7 @@ header.scrolled{
 .mobile-brand p{
     
         font-weight: 500;
-        font-size: 1.6em;
+        font-size: 1.4em;
         color: #F8FAFC;
     
 }
@@ -283,7 +283,7 @@ header.scrolled{
 .hero h1{
     color: #F8FAFC;
     font-weight: 600;
-    font-size: 10em;
+    font-size: 8em;
 
     width: 60%;
     text-align: center;
@@ -304,7 +304,7 @@ header.scrolled{
 .hero h2{
     color: #F8FAFC;
     font-weight: 500;
-    font-size: 1.8em;
+    font-size: 1.5em;
     width: 70%;
     text-align: center;
     margin: 0 auto;
@@ -318,8 +318,8 @@ header.scrolled{
     align-items: center;
     justify-content: center;
 
-    width: 220px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
 
     background: white;
     color: #0F172A;
@@ -337,7 +337,7 @@ header.scrolled{
 
 .learnmore:hover{
     transform: scale(.98);
-    filter: drop-shadow(0 0 30px #94A3B8);
+    filter: drop-shadow(0 0 20px #94A3B8);
 }
 
 
@@ -734,8 +734,8 @@ input::placeholder{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
-    padding: 12rem 10rem;
+    gap: 4rem;
+    padding: 10rem 2rem;
 
     
 
@@ -764,14 +764,14 @@ input::placeholder{
 .categorias{ 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
+    gap: 2rem;
     width: 90%;
     
 
 }
 .categoria-card{
 
-    height: 180px;
+    height: 160px;
     width: 100%;
     background-color: red;
     border-radius: 12px;
@@ -875,7 +875,7 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     width: 100%;
     max-width: 1200px;
     margin:auto;
@@ -899,7 +899,7 @@ input::placeholder{
 
     color: #F8FAFC;
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1em;
     width: auto;
     text-align: center;
     padding: 0;
@@ -922,7 +922,7 @@ input::placeholder{
 
     color: #1E293B;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 1em;
     border-radius: 12px;
     margin: 2em;
@@ -960,23 +960,23 @@ input::placeholder{
 
 .create-post{
     background-color: #0F172A;
-    padding: 8rem;
+    padding: 6rem;
 }
 
 
 .create-post h1{
     font-weight: 600;
-    font-size: 3em;
+    font-size: 2.5em;
     width: 80%;
     text-align: center;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     color: #F8FAFC;
 
 }
 
 .create-post > p{
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.2em;
     width: 90%;
     text-align: center;
     margin: 0 auto;
@@ -995,9 +995,9 @@ input::placeholder{
     border: 2px solid black;
     border-radius: 20px;
 
-    margin: 4rem auto;
+    margin: 2rem auto;
 
-    padding: 6rem;
+    padding: 4rem;
 
     display: flex;
     align-items:center;
@@ -1011,7 +1011,7 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: .5rem;
 
     flex: 1;
     min-width: 420px;
@@ -1020,12 +1020,14 @@ input::placeholder{
 .post-template form label{
     font-weight: 600;
     margin-top: 1rem;
+    font-size: 1rem;
 
 }
 
 .post-template form textarea{
     resize: none;
     overflow: hidden;
+    font-size: .8rem;
 }
 
 .form-input{
@@ -1033,7 +1035,7 @@ input::placeholder{
     border: 2px solid #0F172A;
     border-radius: 12px;
     background-color: white;
-    font-size: 1rem;
+    font-size: .8rem;
 
     transition: .3s;
 }
@@ -1129,7 +1131,7 @@ input[type="file"]{
 
     cursor:pointer;
 
-    transition:.4s;
+    transition: .8s;
 
 
     margin: 0 auto;
@@ -1147,7 +1149,7 @@ input[type="file"]{
 .contador{
     width: 100%;
     text-align: right;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 500;
     color: #64748B;
 }
@@ -1182,14 +1184,14 @@ input[type="file"]{
     justify-content:center;
     align-items:center;
 
-    min-height: 100%;
+    min-height: 90%;
     align-self: center;
 
 }
 
 .post-preview .post-card{
 
-    width:100%;
+    width: 70%;
     max-width:600px;
 
     cursor:default;
@@ -1208,6 +1210,7 @@ input[type="file"]{
 
 .post-preview .post-card .post-content{
     padding: 2rem;
+    font-size: .8rem;
 }
 
 .post-preview .post-card:hover{
@@ -1298,19 +1301,19 @@ input[type="file"]{
 
     display: flex;
     justify-content: center;
-    padding: 2em 2rem;
+    padding: 1rem 0;
 }
 
 .post-full{
-    width:min(100%, 1000px);
+    width:min(100%, 700px);
     height: 80vh;
 
-    box-shadow: 0 0 30px #3B82F6;
+    box-shadow: 0 10px 30px #3B82F6;
 }
 
 
 .post-full .post-img{
-    height: 500px;
+    height: 800px;
     width: 100%;
     position: relative;
 }
@@ -1335,11 +1338,12 @@ input[type="file"]{
     padding: 1rem 1.5rem;
     border-radius: 9999px;
     font-weight: 600;
+    font-size: .8rem;
 }
 
 
 .post-full .post-content h2{
-    font-size:4rem;
+    font-size:3rem;
     margin-bottom:2rem;
 }
 
@@ -1348,17 +1352,19 @@ input[type="file"]{
     overflow:visible;
     -webkit-line-clamp:unset;
     line-clamp:unset;
+    font-size: .8rem;
 }
 
+.post-full:hover{
+    box-shadow: 0 0 30px #3B82F6;
+}
 
 #post-long-description{
     margin-top:2rem;
     white-space:pre-wrap;
 }
 
-.post-full:hover{
-    transform: none;
-}
+
 
 
 .button-content{
@@ -1424,13 +1430,13 @@ posts.html{
     align-items: center;
     gap: 2rem;
 
-    padding: 12rem 6rem;
+    padding: 8rem 4rem;
 }
 
 .info-section h1{
 
     font-weight: 600;
-    font-size: 3.5em;
+    font-size: 3em;
     width: 80%;
     text-align: center;
     margin: 0 auto;
@@ -1449,7 +1455,7 @@ posts.html{
     columns: black;
 
     float: inline-start;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 
@@ -1457,13 +1463,13 @@ posts.html{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 4em;
+    gap: 2em;
     align-items: stretch;
 }
 
 .info-cards h2{
     margin-bottom: 1em;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .info-section .categoria-card{
@@ -1517,12 +1523,12 @@ footer{
 .column h3{
 
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
 }
 
 .column ul li{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .column ul li a{
@@ -1568,7 +1574,7 @@ footer{
 .publicaciones-top{
     width: 100%;
     height: auto;
-    padding: 8rem 2rem 0 2rem;
+    padding: 6rem 1.5rem 0 1.5rem;
 
     position: relative;
 
@@ -1600,7 +1606,7 @@ footer{
 .publicaciones-up h1{
     color: #F8FAFC;
     font-weight: 600;
-    font-size: 4em;
+    font-size: 3em;
 
     margin-bottom: 1rem;
 
@@ -1611,7 +1617,7 @@ footer{
 .publicaciones-up p{
     color: #F8FAFC;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1em;
     
 }
 
@@ -1621,7 +1627,7 @@ footer{
     background-color: #DDE7F4;
     border-radius: 9999px;
 
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.2rem;
 
     display: flex;
     flex-direction: row;
@@ -1680,8 +1686,8 @@ footer{
     align-items: center;
 
 
-    padding: 1rem;
-    gap: 2rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
 
     color: #F8FAFC;
 }
@@ -1706,10 +1712,11 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.2rem;
     gap: 1rem;
 
     color: #F8FAFC;
+    font-size: .8rem;
 
     background-color: #1e293b66;
     border-radius: 12px;
@@ -1731,7 +1738,7 @@ footer{
 
 
 .filter-group .form-input{
-    min-width:220px;
+    min-width:200px;
 
     appearance:none;
     cursor:pointer;
@@ -1741,7 +1748,7 @@ footer{
     background-position:right 1rem center;
     background-size:16px;
 
-    padding-right:3rem;
+    padding-right:2rem;
 }
 
 
@@ -1757,6 +1764,7 @@ select.form-input{
     cursor:pointer;
 
     padding-right:3rem;
+    font-size: .8rem;
 
     background-image:url("imgs/icons/flecha-hacia-abajo.png");
     background-repeat:no-repeat;
@@ -1782,7 +1790,7 @@ select.form-input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8rem 2rem;
+    padding: 6rem 1rem;
 
     
 }
@@ -2961,21 +2969,24 @@ footer{
 @media (max-width: 768px){
 
 
+    .header{
+        justify-content: space-around;
+    }
     .brand{
-    gap: 1em;
+    gap: .5em;
 
     }
 
     .logo{
 
-        width: 2em;
-        height:2em;
+        width: 1.5em;
+        height:1.5em;
     }
 
 
     .brand p{
         font-weight: 500;
-        font-size: 1.6em;
+        font-size: 1.2em;
         color: #F8FAFC;
     }
 
@@ -2983,6 +2994,9 @@ footer{
     display:none;
     }
 
+    #header-username{
+        display: none;
+    }
     .menu-toggle{
     display: block;
 }
@@ -2992,25 +3006,26 @@ footer{
 
 
 .hero{
-    padding: 7rem 2rem 4rem;
+
+    padding: 0 2rem;
     min-height: 100vh;
 }
 
 .hero h1{
-    font-size: 8rem;
+    font-size: 4.5rem;
     width:100%;
     min-width:0;
 }
 
 .hero h2{
     width:100%;
-    font-size:1.4rem;
+    font-size:1.2rem;
 }
 
 .hero .learnmore{
-    width:180px;
-    height:65px;
-    font-size:1.1rem;
+    width:140px;
+    height:55px;
+    font-size:1rem;
 }
 
 
@@ -3050,7 +3065,7 @@ footer{
 
 
 .categorias-section{
-    padding: 10rem 2rem;
+    padding: 10rem 1rem;
 }
 
 .categorias{
@@ -3069,6 +3084,14 @@ footer{
     display:flex;
         flex-direction:column;
         align-items:center;
+}
+
+.publicar-section h1{
+    font-size: 2rem;
+}
+
+.publicar-section p{
+    font-size: 1rem;
 }
 
 .publicar-middle{
@@ -3099,8 +3122,9 @@ footer{
     height: 180px;
 }
 
-.publicar-middle .post-preview .post-content{
+.publicar-middle .post-preview .post-content p{
     padding: 1.5rem;
+    font-size: .8rem;
 }
 
 .publicar-steps{
@@ -3115,8 +3139,12 @@ footer{
 
 
 .info-section{
-    padding: 14rem 2rem;
+    padding: 10rem 1rem;
     
+}
+
+.info-section .categoria-card{
+    width: 90%;
 }
 
 
@@ -3153,7 +3181,7 @@ footer{
     padding: 6rem 2rem;
 }
 .create-post h1{
-    font-size: 4rem;
+    font-size: 2rem;
     width:90%;
     min-width:0;
     
@@ -3161,7 +3189,7 @@ footer{
 
 .create-post > p{
     width:90%;
-    font-size:1.8rem;
+    font-size:1rem;
 }
 
 .post-template{
@@ -3175,6 +3203,28 @@ footer{
     width: 100%;
 }
 
+
+.post-template form{
+
+    gap: .5rem;
+
+
+}
+
+.post-template form label{
+
+    font-size: 1rem;
+
+}
+
+.post-template form textarea{
+    resize: none;
+    overflow: hidden;
+    font-size: .8rem;
+}
+
+
+
 .post-preview{
     width: 100%;
 }
@@ -3187,7 +3237,7 @@ footer{
 .create-post .contador{
     width: 100%;
     text-align: right;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 500;
     color: #64748B;
 }
@@ -3203,21 +3253,26 @@ footer{
 
 .publicaciones-up h1{
     font-weight: 600;
-    font-size: 2.5em;
+    font-size: 2em;
 
     margin-bottom: .5rem;
 }
 
 .publicaciones-up p{
     font-weight: 400;
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 .publicaciones-up .search-bar{
-    width: 50%;
+    width: 60%;
 
-    padding: 1rem .8rem;
+    padding: 1rem 1.4rem;
     gap: .5rem;
+
+}
+
+.publicaciones-up #search-input{
+    font-size: .8rem;
 }
 
 .publicaciones-up .search-bar:focus-within{
