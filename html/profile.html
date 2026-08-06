@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discoverly</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imgs/icons/icon.png">
+</head>
+<body>
+    
+
+
+    <main class="profile-page">
+
+        <section class="profile-header">
+
+            <img id="profile-photo" src="../imgs/default-user.png">
+
+            <h1 id="profile-name">Nombre</h1>
+
+            <p id="profile-email">email@email.com</p>
+
+            <p id="profile-bio">Sin biografía.</p>
+
+            <div class="profile-buttons">
+
+                <button id="edit-profile-btn">
+                    Editar perfil
+                </button>
+
+                <button id="logout-btn">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="profile-posts">
+
+            <h2 style="color: white; margin-bottom: 1rem;">Mis publicaciones</h2>
+
+            <div id="profile-posts-grid" class="posts-grid"></div>
+
+        </section>
+
+    </main>
+
+
+   <div id="edit-profile-modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2 style="margin-bottom: 1rem;">Editar perfil</h2>
+
+            <label for="edit-photo" id="fto-perfil-editar">Foto de perfil</label>
+            <input type="file" id="edit-photo" accept="image/*">
+
+            <img
+                id="edit-photo-preview"
+                src="../imgs/default-user.png"
+                alt="Vista previa"
+            >
+
+            <label for="edit-name">Nombre</label>
+            <input
+                type="text"
+                id="edit-name"
+                maxlength="30"
+            >
+
+            <label for="edit-bio">Biografía</label>
+
+            <textarea
+                id="edit-bio"
+                maxlength="200"
+            ></textarea>
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    id="cancel-edit-btn"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    id="save-edit-btn"
+                >
+                    Guardar cambios
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script type="module" src="../js/profile.js"></script>
+
+</body>
+</html>
+
+
+
+

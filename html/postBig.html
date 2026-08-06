@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discoverly</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imgs/icons/icon.png">
+</head>
+
+<body>
+
+   <header>
+
+        <nav class="mobile-menu">
+
+            <div class="mobile-links">
+
+                <a href="../index.html">Inicio</a>
+                <a href="../index.html#search-section">Explorar</a>
+                <a href="../index.html#publicaciones-destacadas">Destacado</a>
+                <a href="../index.html#categorias-section">Categorías</a>
+                <a href="create-post.html">Publicar</a>
+                <a href="posts.html">Publicaciones</a>
+
+            </div>
+
+
+            <div class="mobile-brand">
+                <img class="logo" src="../imgs/icons/icon.png" id="logo">
+                <p>Discoverly</p>
+            </div>
+        </nav>
+
+        <div class="brand">
+
+            <img class="logo" src="../imgs/icons/icon.png" id="logo">
+            <p>Discoverly</p>
+        </div>
+        
+
+        <ul class="menu-list">
+            <li class="menu-link"><a href="index.html">Inicio</a></li>
+            <li class="menu-link"><a href="#search-section">Explorar</a></li>
+            <li class="menu-link"><a href="#publicaciones-destacadas">Destacado</a></li>
+            <li class="menu-link"><a href="#categorias-section">Categorías</a></li>
+            <li class="menu-link"><a href="create-post.html">Publicar</a></li>
+            <li class="menu-link"><a href="posts.html">Publicaciones</a></li>
+        </ul>
+
+        <div class="icons">
+
+
+            <div class="user-session" id="user-session">
+
+                <img
+                    class="header-user"
+                    id="header-user"
+                    src="../imgs/icons/user.png"
+                    alt="Usuario"
+                >
+
+                <span id="header-username">
+                    Invitado
+                </span>
+
+            </div>
+
+            <p class="header-icon">
+                <img class="menu-toggle" src="../imgs/icons/menu.png">
+            </p>
+
+        </div>
+
+         
+         
+        
+    </header>
+
+<div class="button-content">
+    <button id="button-atras">Volver atrás <span>↩</span></button>
+    
+</div>
+<main class="post-page">
+
+    <div class="post-card post-full">
+
+        <div class="post-img">
+
+            <span class="post-category" id="post-category">
+                Categoría
+            </span>
+
+            <img
+                id="post-img"
+                src=""
+                alt="Imagen">
+
+        </div>
+
+        <div class="post-content">
+
+            <h2 id="post-title">
+                Título
+            </h2>
+
+            <p id="post-date"></p>
+
+            <p id="post-description">
+                Explicación breve
+            </p>
+
+            <hr>
+
+            <p id="post-long-description">
+                Explicación larga
+            </p>
+
+        </div>
+
+        <div class="post-footer">
+
+            <div class="user">
+
+                <img id="post-user-photo" src="../imgs/icons/user.png">
+
+                <div class="user-info">
+
+                    <h4 id="post-user">
+                        Usuario
+                    </h4>
+
+                </div>
+
+            </div>
+
+            <div class="reactions">
+
+                <div id="like-btn">
+
+                    ❤️ <span id="likes-count">0</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script type="module" src="../js/post.js"></script> 
+<script type="module" src="../js/auth.js"></script>
+
+    
+    
+    
+
+</body>
+</html>

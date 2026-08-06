@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discoverly</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imgs/icons/icon.png">
+</head>
+<body>
+    
+   <header>
+
+        <nav class="mobile-menu">
+
+            <div class="mobile-links">
+
+                <a href="../index.html">Inicio</a>
+                <a href="../index.html#search-section">Explorar</a>
+                <a href="../index.html#publicaciones-destacadas">Destacado</a>
+                <a href="../index.html#categorias-section">Categorías</a>
+                <a href="create-post.html">Publicar</a>
+                <a href="posts.html">Publicaciones</a>
+
+            </div>
+
+
+            <div class="mobile-brand">
+                <img class="logo" src="../imgs/icons/icon.png" id="logo">
+                <p>Discoverly</p>
+            </div>
+        </nav>
+
+        <div class="brand">
+
+            <img class="logo" src="../imgs/icons/icon.png" id="logo">
+            <p>Discoverly</p>
+        </div>
+        
+
+        <ul class="menu-list">
+            <li class="menu-link"><a href="index.html">Inicio</a></li>
+            <li class="menu-link"><a href="#search-section">Explorar</a></li>
+            <li class="menu-link"><a href="#publicaciones-destacadas">Destacado</a></li>
+            <li class="menu-link"><a href="#categorias-section">Categorías</a></li>
+            <li class="menu-link"><a href="create-post.html">Publicar</a></li>
+            <li class="menu-link"><a href="posts.html">Publicaciones</a></li>
+        </ul>
+
+        <div class="icons">
+
+
+            <div class="user-session" id="user-session">
+
+                <img
+                    class="header-user"
+                    id="header-user"
+                    src="../imgs/icons/user.png"
+                    alt="Usuario"
+                >
+
+                <span id="header-username">
+                    Invitado
+                </span>
+
+            </div>
+
+            <p class="header-icon">
+                <img class="menu-toggle" src="../imgs/icons/menu.png">
+            </p>
+
+        </div>
+
+         
+         
+        
+    </header>
+
+    <main>
+
+
+
+        <div class="publicaciones-top">
+
+            <div class="publicaciones-up">
+
+
+                <div class="publicaciones-title">
+
+                <h1>Todas las publicaciones</h1>
+                <p>Explora todos los descubrimientos de la Comunidad</p>
+
+                </div>
+
+            
+
+                <form class="search-bar">
+
+                    <span class="search-icon">🔍</span>
+
+                    <input type="text"  id="search-input"  placeholder="¿Qué te interesa hoy?">
+
+                </form>
+
+
+
+            </div>
+
+
+            <button id="btn-filtros" class="btn-filtros"> Mostrar filtros </button>
+
+            <div class="publicaciones-filters">
+
+
+                <div class="filters">
+
+                    <div class="filter-group">
+
+                        <label for="category-filter">Categoría</label>
+
+                        <select id="filter-category" class="form-input">
+
+                            <option value="all">Todas</option>
+                            <option value="tecnologia">Tecnología</option>
+                            <option value="ciencia">Ciencia</option>
+                            <option value="musica">Música</option>
+                            <option value="arte">Arte</option>
+                            <option value="cocina">Cocina</option>
+                            <option value="deportes">Deportes</option>
+                            <option value="videojuegos">Videojuegos</option>
+                            <option value="historia">Historia</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="filter-date">Fecha</label>
+
+                            <select id="filter-date" class="form-input">
+
+                                <option value="recent">Hoy</option>
+                                <option value="week">Última semana</option>
+                                <option value="month">Último mes</option>
+
+                            </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="order-filter">Ordenar por</label>
+
+                        <select id="order-filter" class="form-input">
+
+                            <option value="recientes">Más recientes</option>
+                            <option value="antiguos">Más antiguos</option>
+                            <option value="likes">Más likes</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div id="publicaciones-found">
+
+                    <p>1692.2527 publicaciones encontradas</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+            
+
+
+        <div class="publicaciones-todas" id="publicaciones-todas">
+
+            <div id="loader" class="loader">
+
+                <div class="spinner"></div>
+                <p>Cargando publicaciones...</p>
+
+            </div>
+
+            <div class="posts-grid" id="posts-grid">
+
+            </div>
+
+            <div id="no-results" class="no-results">
+
+                No se han encontrado publicaciones.
+                <br>
+
+                Prueba a cambiar los filtros o escribir otra búsqueda.
+
+            </div>
+                
+
+            </div>
+
+        </div>
+
+    </main>
+    
+
+    <script type="module" src="../js/posts.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    
+    
+</body>
+</html>
