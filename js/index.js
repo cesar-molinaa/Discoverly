@@ -257,7 +257,7 @@ async function cargarPublicacionesDestacadas() {
 
     card.addEventListener("click", () => {
 
-        window.location.href = `postBig.html?id=${post.firebaseId}`;
+        window.location.href = `/html/postBig.html?id=${post.firebaseId}`;
 
     });
 
