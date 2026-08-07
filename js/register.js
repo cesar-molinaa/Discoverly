@@ -119,7 +119,6 @@ async function registrarUsuario(e){
 
 
         mensaje.textContent = "¡Cuenta creada correctamente!";
-        window.location.href = "../index.html";
 
     }
 

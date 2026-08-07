@@ -3493,4 +3493,14 @@ footer{
     }
 
 
+
+
+    .post-page{
+        padding: 1rem 2rem;
+    }
+
+    .post-full .post-content h2{
+        font-size: 2.2rem;
+    }
+
 }
