@@ -631,7 +631,7 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: .5rem;
     flex: 1;
 }
 
@@ -1290,9 +1290,6 @@ input[type="file"]{
     overflow-y: auto;
 }
 
-.post-content hr{
-    margin: 1rem 0;
-}
 
 
 
