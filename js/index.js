@@ -255,6 +255,12 @@ async function cargarPublicacionesDestacadas() {
 
     });
 
+    card.addEventListener("click", () => {
+
+        window.location.href = `postBig.html?id=${post.firebaseId}`;
+
+    });
+
     postsGrid.appendChild(card);
 
     if (!post.titulo || !post.imagen) return;
