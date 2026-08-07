@@ -2408,9 +2408,10 @@ select.form-input{
     font-size: 2.5rem;
 }
 
-.fto-perfil-editar{
-    padding: 1rem;
-    border: 1ps dotted #F8FAFC;
+#fto-perfil-editar{
+    padding: .5rem;
+    border: 3px dotted #F8FAFC;
+    border-radius: 12px;
 }
 .modal-content label{
     margin-top: 1rem;
