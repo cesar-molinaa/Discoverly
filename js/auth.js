@@ -26,6 +26,42 @@ const userSession = document.getElementById("user-session");
 
 
 
+
+const createPostBtn = document.getElementById("btn-create-post");
+const createPostBtnHeader = document.getElementById("publicar-btn");
+
+
+
+
+
+function irACrearPublicacion() {
+
+    if (auth.currentUser) {
+
+        window.location.href = "/html/create-post.html";
+
+    } else {
+
+        window.location.href = "/html/login.html";
+
+    }
+
+}
+
+
+
+if (createPostBtn) {
+    createPostBtn.addEventListener("click", irACrearPublicacion);
+}
+
+if (createPostBtnHeader) {
+    createPostBtnHeader.addEventListener("click", irACrearPublicacion);
+}
+
+
+
+
+
 if (userSession) {
 
     userSession.addEventListener("click", () => {
