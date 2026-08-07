@@ -3503,4 +3503,38 @@ footer{
         font-size: 2.2rem;
     }
 
+    .main-form main{
+        padding: 1rem;
+    }
+
+    .form-register{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .form-register h1{
+        font-size: 1.8rem;
+    }
+
+    .form-register p{
+        font-size: .8rem;
+    }
+
+    .form-register label{
+        font-size: .8rem;
+    }
+
+    .form-register input{
+        font-size: .8rem;
+    }
+
+
+    #login-btn{
+        font-size: .8rem;
+    }
+
+    .auth-link{
+        font-size: .8rem;
+    }
+
 }
