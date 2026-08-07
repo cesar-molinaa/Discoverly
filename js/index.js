@@ -25,9 +25,9 @@ export const coloresCategorias = {
     tecnologia: "#3B82F6",
     ciencia: "#22D3EE",
     musica: "#EC4899",
-    arte: "#A855F7",
-    cocina: "#F59E0B",
-    deportes: "#22C55E",
+    animales: "#337b3f",
+    idiomas: "#f5ce0b",
+    deportes: "#4ec522",
     videojuegos: "#8B5CF6",
     historia: "#D97706"
 };
