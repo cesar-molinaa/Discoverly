@@ -171,31 +171,57 @@ async function cargarMisPublicaciones(user){
 
 
     card.innerHTML = `
+        
+        <div class="post-img">
 
-    <div class="post-img">
+            <span
+                class="post-category"
+                style="background-color:${coloresCategorias[post.categoria]}"
+            >
+                ${post.categoria.charAt(0).toUpperCase() + post.categoria.slice(1)}
+            </span>
 
-        <span
-            class="post-category"
-            style="background-color:${coloresCategorias[post.categoria]}"
-        >
-            ${post.categoria.charAt(0).toUpperCase() + post.categoria.slice(1)}
-        </span>
+            <img src="${post.imagen}" alt="${post.titulo}">
 
-        <img src="${post.imagen}" alt="${post.titulo}">
+        </div>
 
-    </div>
+        <div class="post-content">
 
-    <div class="post-content">
+            <h2>${post.titulo}</h2>
 
-        <h2>${post.titulo}</h2>
+            <p class="post-date">${obtenerFecha(post.fecha)}</p>
 
-        <p class="post-date">${obtenerFecha(post.fecha)}</p>
+            <p>${post.explicacion}</p>
 
-        <p>${post.explicacion}</p>
+        </div>
 
-    </div>
+        <div class="post-footer">
 
-`;
+            <div class="user">
+
+                <img
+                
+                    src="${post.usuarioFoto || "../imgs/icons/user.png"}"
+                    alt="Usuario"
+                >
+
+                <div class="user-info">
+
+                    <h4>${post.usuarioNombre || "Usuario"}</h4>
+
+                </div>
+
+            </div>
+            <div class="reactions">
+
+            <span class="like-btn"> ❤️ ${post.likes.length} </span>
+
+            <span> 💬 ${post.comentarios}  </span>
+            
+            </div>
+
+        </div>
+    `;
 
 
 card.addEventListener("click", () => {
