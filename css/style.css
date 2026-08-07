@@ -1443,14 +1443,14 @@ posts.html{
     align-items: center;
     gap: 2rem;
 
-    padding: 8rem 4rem;
+    padding: 8rem 2rem;
 }
 
 .info-section h1{
 
     font-weight: 600;
-    font-size: 3em;
-    width: 80%;
+    font-size: 2.5em;
+    width: 90%;
     text-align: center;
     margin: 0 auto;
     color: #0F172A;
@@ -1480,8 +1480,9 @@ posts.html{
     align-items: stretch;
 }
 
+
 .info-cards h2{
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     font-size: 1.5rem;
 }
 
@@ -3047,18 +3048,50 @@ footer{
 
 
 
-.search-section{
-    padding:8rem 1.5rem  4rem 1.5rem;
+
+.post-card{
+    min-height: auto;
 }
 
-.search-section h2{
-    font-size:2rem;
-    width:100%;
+.post-content p{
+    font-size: .8rem;
 }
 
-.search-bar{
-    width: 90%;
+.post-content h2{
+    font-size: 1.5rem;
 }
+
+
+.post-footer h4, .post-footer span{
+    font-size: .8rem;
+}
+
+
+
+.post-footer .user img{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3068,40 +3101,54 @@ footer{
 }
 
 
-
-.post-card{
-    height:auto;
+.publicaciones-destacadas h1{
+    font-size: 2.4rem;
+    margin: 0 auto;
+    width: auto;
 }
 
+.publicaciones-destacadas{
+    gap: 4rem;
+    padding: 4rem 2rem;
+}
 
 
 
 
 
 .categorias-section{
-    padding: 10rem 1rem;
+    padding: 6rem 1rem;
 }
 
 .categorias{
     grid-template-columns:1fr;
     gap:2rem;
-    width:90%;
+    width: 100%;
 }
 
 
 
+.categoria-card h2{
+    font-size: 1.2rem;
+}
+
+.categoria-card p{
+    font-size: .8rem;
+}
 
 
 
 .publicar-section{
-    padding:6rem 2rem;
+    padding: 4rem 2rem;
     display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 2rem;
 }
 
 .publicar-section h1{
     font-size: 2rem;
+    width: auto;
 }
 
 .publicar-section p{
@@ -3110,14 +3157,14 @@ footer{
 
 .publicar-middle{
     
-    padding:2rem;
+    padding:1rem;
     gap:3rem;
 
     display:flex;
     flex-direction:column;
     align-items:center;
 
-    width: 90%;
+    width: 100%;
 
 
 }
@@ -3136,6 +3183,9 @@ footer{
     height: 180px;
 }
 
+.publicar-middle .post-preview .post-card .post-img .post-category{
+    font-size: .8rem;
+}
 .publicar-middle .post-preview .post-content p{
     padding: 1.5rem;
     font-size: .8rem;
@@ -3143,27 +3193,35 @@ footer{
 
 .publicar-steps{
     width: 100%;
-    font-size:1rem;
+    font-size:.8rem;
     text-align: center;
 }
 
+#btn-create-post{
+    font-size: 1rem;
+}
 
 
 
 
 
 .info-section{
-    padding: 10rem 1rem;
+    padding: 6rem 1rem;
     
 }
 
 .info-section .categoria-card{
-    width: 90%;
+    width: 100%;
 }
 
 
+.info-section .categoria-card h2{
+    font-size: 1.2rem;
+}
 .info-section .categoria-card{
     margin: 0 auto;
+    padding: 1rem 2rem ;
+    font-size: .8rem;
 }
 .info-cards{
     flex-direction: column;
@@ -3191,24 +3249,27 @@ footer{
 
 
 
+
+
+
 .create-post{
     padding: 6rem 2rem;
 }
 .create-post h1{
     font-size: 2rem;
-    width:90%;
+    width: auto;
     min-width:0;
     
 }
 
 .create-post > p{
     width:90%;
-    font-size:1rem;
+    font-size:.8rem;
 }
 
 .post-template{
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding: 2rem;
 }
 
@@ -3220,7 +3281,7 @@ footer{
 
 .post-template form{
 
-    gap: .5rem;
+    gap:.2rem;
 
 
 }
@@ -3248,13 +3309,36 @@ footer{
     max-width: none;
 }
 
+
+#preview-titulo{
+    font-size: 1.5rem;
+}
+
+
+
+
+#preview-explicacion .preview-text, #preview-explicacion-larga .preview-text{
+    font-size: .8rem;
+}
+
+
+.post-preview .post-footer h4{
+    font-size: .8rem;
+}
+
+
+
+
+
 .create-post .contador{
     width: 100%;
     text-align: right;
-    font-size: .8rem;
+    font-size: .6rem;
     font-weight: 500;
     color: #64748B;
 }
+
+
 
 
 
@@ -3267,27 +3351,29 @@ footer{
 
 .publicaciones-up h1{
     font-weight: 600;
-    font-size: 2em;
-
+    font-size: 1.8em;
+    width: auto;
     margin-bottom: .5rem;
 }
 
 .publicaciones-up p{
     font-weight: 400;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .publicaciones-up .search-bar{
     width: 60%;
 
-    padding: 1rem 1.4rem;
+    padding: .5rem 1rem;
     gap: .5rem;
 
 }
 
-.publicaciones-up #search-input{
-    font-size: .8rem;
+.publicaciones-up .search-bar #search-input{
+    font-size: .7rem;
 }
+
+
 
 .publicaciones-up .search-bar:focus-within{
     width: 100%;
@@ -3320,10 +3406,11 @@ footer{
     top: 100%;
     left:1rem;
 
-    width: 60vw;
+    width: 70vw;
     max-width: auto;
 
-    padding:1.5rem;
+    padding:1rem;
+    gap: 1rem;
 
     background:#1e293bea;
     backdrop-filter:blur(10px);
@@ -3341,7 +3428,7 @@ footer{
 
     flex-direction: column;
     align-items: flex-start;
-    gap: .6rem;
+    gap: .5rem;
 
    width: 100%;
    padding: 1rem;
@@ -3352,10 +3439,12 @@ footer{
     box-sizing: none;
 }
 
-.filters.activo .form-input{
+.filters.activo  .filter-group .form-input{
 
     width:100%;
     min-width:100%;
+    font-size: .6rem;
+
 }
 
 
