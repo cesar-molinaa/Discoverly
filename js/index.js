@@ -24,12 +24,16 @@ import { obtenerFecha } from "./create-post.js";
 export const coloresCategorias = {
     tecnologia: "#3B82F6",
     ciencia: "#22D3EE",
-    musica: "#EC4899",
+    entretenimiento: "#EC4899",
     animales: "#337b3f",
     idiomas: "#f5ce0b",
     deportes: "#4ec522",
-    videojuegos: "#8B5CF6",
-    historia: "#D97706"
+    videojuegos: "#2c24c4",
+    historia: "#986b36",
+    personas: "#ec4a38",
+    geografia: "#ffa91e",
+    cultura: "#8a68da",
+    cocina: "#3aa898"
 };
 
 

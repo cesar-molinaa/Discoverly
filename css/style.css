@@ -800,7 +800,7 @@ input::placeholder{
     border-left: 8px solid #22D3EE;
 }
 
-#musica{
+#entretenimiento{
 
     border-left: 8px solid #EC4899;
 }
@@ -818,11 +818,27 @@ input::placeholder{
 }
 
 #videojuegos{
-    border-left: 8px solid #8B5CF6;
+    border-left: 8px solid #2c24c4;
 }
 
 #historia{
-    border-left: 8px solid #D97706;
+    border-left: 8px solid #986b36;
+}
+
+#personas{
+    border-left: 8px solid #ec4a38;
+}
+
+#geografia{
+    border-left: 8px solid #ffa91e;
+}
+
+#cultura{
+    border-left: 8px solid #8a68da;
+}
+
+#cocina{
+    border-left: 8px solid #3aa898;
 }
 
 .categoria-card:hover{
