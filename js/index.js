@@ -49,10 +49,15 @@ const logo = document.getElementById("logo");
 
 if(logo) {
 
-    logo.addEventListener("click", () => {
+   logo.addEventListener("click", () => {
 
-        window.location.href = "index.html#hero"
-    })
+        if (window.location.pathname.includes("/html/")) {
+            window.location.href = "../index.html#hero";
+        } else {
+            window.location.href = "index.html#hero";
+        }
+
+    });
 }
 
 
@@ -179,7 +184,7 @@ async function cargarPublicacionesDestacadas() {
 
                 <img
                 
-                    src="${post.usuarioFoto || "../imgs/icons/user.png"}"
+                    src="${post.usuarioFoto || "imgs/icons/user.png"}"
                     alt="Usuario"
                 >
 
@@ -249,15 +254,10 @@ async function cargarPublicacionesDestacadas() {
 
     postsGrid.style.opacity = "1";
 
-    card.addEventListener("click", () => {
-
-        window.location.href = `postBig.html?id=${post.firebaseId}`;
-
-    });
 
     card.addEventListener("click", () => {
 
-        window.location.href = `/html/postBig.html?id=${post.firebaseId}`;
+        window.location.href = `html/postBig.html?id=${post.firebaseId}`;
 
     });
 

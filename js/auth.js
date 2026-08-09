@@ -17,6 +17,10 @@ import {
 import { auth, db } from "./firebase.js";
 
 
+const rutaHTML = window.location.pathname.includes("/html/")
+    ? ""
+    : "html/";
+
 
 //VARIABLES GENERALES
 
@@ -38,11 +42,11 @@ function irACrearPublicacion() {
 
     if (auth.currentUser) {
 
-        window.location.href = "/html/create-post.html";
+        window.location.href = `${rutaHTML}html/create-post.html`;
 
     } else {
 
-        window.location.href = "/html/login.html";
+        window.location.href = `${rutaHTML}login.html`;
 
     }
 
@@ -68,11 +72,11 @@ if (userSession) {
 
         if (auth.currentUser) {
 
-            window.location.href = "/html/profile.html";
+            window.location.href = `${rutaHTML}profile.html`;
 
         } else {
 
-            window.location.href = "/html/login.html";
+            window.location.href = `${rutaHTML}login.html`;
 
         }
 
@@ -100,7 +104,7 @@ if (headerPhoto) {
 
         const datos = docSnap.data();
 
-        headerPhoto.src = datos.foto || "../imgs/default-user.png";
+        headerPhoto.src = datos.foto || `${rutaImagenes}default-user.png`;
 
     }
 
