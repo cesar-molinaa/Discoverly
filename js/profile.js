@@ -74,7 +74,7 @@ const logoutBtn = document.getElementById("logout-btn");
 
 
 const params = new URLSearchParams(window.location.search);
-const perfilUid = params.get("id");
+const perfilUid = params.get("uid");
 
 
 const profilePostsTitle = document.getElementById("profile-posts-title");

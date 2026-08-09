@@ -42,24 +42,6 @@ const postsGrid = document.querySelector(".posts-grid");
 
 
 
-/**LOGO TE LLEVA AL INICIO */
-
-
-const logo = document.getElementById("logo");
-
-if (logo) {
-
-    logo.addEventListener("click", () => {
-
-        const base = window.location.pathname.includes("/html/")
-            ? "../"
-            : "./";
-
-        window.location.href = `${base}index.html#hero`;
-
-    });
-
-}
 
 
 
@@ -181,7 +163,7 @@ async function cargarPublicacionesDestacadas() {
 
         <div class="post-footer">
 
-            <div class="user">
+            <div class="user post-user">
 
                 <img
                 
@@ -251,6 +233,25 @@ async function cargarPublicacionesDestacadas() {
 
     });
 
+
+    const user = card.querySelector(".post-user");
+
+    if (user) {
+
+        user.addEventListener("click", (e) => {
+
+            e.stopPropagation();
+
+            if (!post.usuarioId) {
+                console.error("Este post no tiene usuarioId:", post);
+                return;
+            }
+
+            window.location.href = `html/profile.html?uid=${post.usuarioId}`;
+
+        });
+
+    }
 
 
     postsGrid.style.opacity = "1";
