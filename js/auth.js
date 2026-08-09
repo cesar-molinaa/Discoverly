@@ -128,3 +128,26 @@ if (headerPhoto) {
     }
 
 });
+
+
+
+
+
+/**LOGO TE LLEVA AL INICIO */
+
+
+const logo = document.getElementById("logo");
+
+if (logo) {
+
+    logo.addEventListener("click", () => {
+
+        const base = window.location.pathname.includes("/html/")
+            ? "../"
+            : "./";
+
+        window.location.href = `${base}index.html#hero`;
+
+    });
+
+}
