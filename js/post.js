@@ -44,9 +44,22 @@ async function cargarPost() {
 const post = { firebaseId: respuesta.id, ...respuesta.data() };
 
 
-    document.getElementById("post-user").textContent = post.usuarioNombre || "Usuario";
 
-    document.getElementById("post-user-photo").src = post.usuarioFoto || "../imgs/icons/user.png";
+    const postUser = document.getElementById("post-user");
+    const postUserPhoto = document.getElementById("post-user-photo");
+
+    postUser.textContent = post.usuarioNombre || "Usuario";
+    postUserPhoto.src = post.usuarioFoto || "../imgs/icons/user.png";
+
+    postUser.addEventListener("click", () => {
+        window.location.href = `profile.html?id=${post.usuarioId}`;
+    });
+
+    postUserPhoto.addEventListener("click", () => {
+        window.location.href = `profile.html?id=${post.usuarioId}`;
+    });
+
+
 
     document.getElementById("post-title").textContent = post.titulo;
 

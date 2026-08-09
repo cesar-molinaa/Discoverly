@@ -105,10 +105,10 @@ function mostrarPublicaciones(publicacionesAMostrar) {
 
         <div class="post-footer">
 
-            <div class="user">
+            <div class="user post-user">
 
                 <img
-                
+
                     src="${post.usuarioFoto || "../imgs/icons/user.png"}"
                     alt="Usuario"
                 >
@@ -172,6 +172,18 @@ function mostrarPublicaciones(publicacionesAMostrar) {
         }
 
         likeBtn.textContent = `❤️ ${post.likes.length}`;
+
+    });
+
+
+
+    const user = card.querySelector(".post-user");
+
+    user.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        window.location.href = `profile.html?uid=${post.usuarioId}`;
 
     });
 

@@ -73,13 +73,32 @@ const logoutBtn = document.getElementById("logout-btn");
 
 
 
+const params = new URLSearchParams(window.location.search);
+const perfilUid = params.get("id");
 
+
+const profilePostsTitle = document.getElementById("profile-posts-title");
 
 
 //RELLENAR PROFILE CON LOS DATOS DE USUARIO
 
 onAuthStateChanged(auth, async (user) => {
 
+    // ESTAMOS VIENDO EL PERFIL DE OTRA PERSONA
+    if (perfilUid) {
+
+        await cargarPerfil(perfilUid);
+
+        editProfileBtn.style.display = "none";
+        logoutBtn.style.display = "none";
+        profileEmail.style.display = "none";
+        profilePostsTitle.textContent = "Publicaciones";
+
+        return;
+    }
+
+
+    // ESTAMOS VIENDO NUESTRO PROPIO PERFIL
     if (!user) {
 
         window.location.href = "login.html";
@@ -87,43 +106,59 @@ onAuthStateChanged(auth, async (user) => {
 
     }
 
-    const docRef = doc(db, "usuarios", user.uid);
+    await cargarPerfil(user.uid);
+
+});
+
+
+
+
+async function cargarPerfil(uid) {
+
+    const docRef = doc(db, "usuarios", uid);
 
     const docSnap = await getDoc(docRef);
 
+    if (!docSnap.exists()) {
 
-    if(docSnap.exists()){
+        profileName.textContent = "Usuario no encontrado";
+        profileEmail.style.display = "none";
+        profileBio.textContent = "";
 
-        const datos = docSnap.data();
-
-        datosUsuario = datos;
-
-
-        profileName.textContent = datos.nombre;
-
-        profileEmail.textContent = datos.email;
-
-        profileBio.textContent = datos.bio || "Sin biografía.";
-
-        if(datos.foto){
-
-            profilePhoto.src = datos.foto;
-
-        }
+        return;
 
     }
 
-    cargarMisPublicaciones(user);
+    const datos = docSnap.data();
 
+    datosUsuario = datos;
 
-});
+    profileName.textContent = datos.nombre || "Usuario";
+
+    profileEmail.textContent = datos.email || "";
+
+    profileBio.textContent = datos.bio || "Sin biografía.";
+
+    if (datos.foto) {
+
+        profilePhoto.src = datos.foto;
+
+    } else {
+
+        profilePhoto.src = "../imgs/default-user.png";
+
+    }
+
+    await cargarMisPublicaciones(uid);
+
+}
 
 
 
 //CARGAR POSTS DEL USUARIO
 
 
-async function cargarMisPublicaciones(user){
+async function cargarMisPublicaciones(uid){
 
     const snapshot = await getDocs(collection(db, "publicaciones"));
 
@@ -136,7 +171,7 @@ async function cargarMisPublicaciones(user){
             ...doc.data()
         };
 
-        if(post.usuarioId === user.uid){
+        if(post.usuarioId === uid){
 
             misPublicaciones.push(post);
 
@@ -157,82 +192,87 @@ async function cargarMisPublicaciones(user){
 
     }
 
+
     profilePostsGrid.innerHTML = "";
 
 
     misPublicaciones.forEach((post, index) => {
 
-    const card = document.createElement("div");
+        const card = document.createElement("div");
 
-    card.className = "post-card";
+        card.className = "post-card";
 
-    card.style.animationDelay = `${index * 0.1}s`;
+        card.style.animationDelay = `${index * 0.1}s`;
 
 
-
-    card.innerHTML = `
+        card.innerHTML = `
         
-        <div class="post-img">
+            <div class="post-img">
 
-            <span
-                class="post-category"
-                style="background-color:${coloresCategorias[post.categoria]}"
-            >
-                ${post.categoria.charAt(0).toUpperCase() + post.categoria.slice(1)}
-            </span>
-
-            <img src="${post.imagen}" alt="${post.titulo}">
-
-        </div>
-
-        <div class="post-content">
-
-            <h2>${post.titulo}</h2>
-
-            <p class="post-date">${obtenerFecha(post.fecha)}</p>
-
-            <p>${post.explicacion}</p>
-
-        </div>
-
-        <div class="post-footer">
-
-            <div class="user">
-
-                <img
-                
-                    src="${post.usuarioFoto || "../imgs/icons/user.png"}"
-                    alt="Usuario"
+                <span
+                    class="post-category"
+                    style="background-color:${coloresCategorias[post.categoria]}"
                 >
+                    ${post.categoria.charAt(0).toUpperCase() + post.categoria.slice(1)}
+                </span>
 
-                <div class="user-info">
+                <img src="${post.imagen}" alt="${post.titulo}">
 
-                    <h4>${post.usuarioNombre || "Usuario"}</h4>
+            </div>
+
+            <div class="post-content">
+
+                <h2>${post.titulo}</h2>
+
+                <p class="post-date">${obtenerFecha(post.fecha)}</p>
+
+                <p>${post.explicacion}</p>
+
+            </div>
+
+            <div class="post-footer">
+
+                <div class="user">
+
+                    <img
+                        src="${post.usuarioFoto || "../imgs/icons/user.png"}"
+                        alt="Usuario"
+                    >
+
+                    <div class="user-info">
+
+                        <h4>${post.usuarioNombre || "Usuario"}</h4>
+
+                    </div>
 
                 </div>
 
+                <div class="reactions">
+
+                    <span class="like-btn">
+                        ❤️ ${post.likes.length}
+                    </span>
+
+                    <span>
+                        💬 ${post.comentarios}
+                    </span>
+                    
+                </div>
+
             </div>
-            <div class="reactions">
-
-            <span class="like-btn"> ❤️ ${post.likes.length} </span>
-
-            <span> 💬 ${post.comentarios}  </span>
-            
-            </div>
-
-        </div>
-    `;
+        `;
 
 
-card.addEventListener("click", () => {
+        card.addEventListener("click", () => {
 
-    window.location.href = `postBig.html?id=${post.firebaseId}`;
+            window.location.href = `postBig.html?id=${post.firebaseId}`;
 
-});
+        });
 
-profilePostsGrid.appendChild(card);
 
-});
+        profilePostsGrid.appendChild(card);
+
+    });
 
 }
 
