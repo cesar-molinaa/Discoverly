@@ -40,13 +40,17 @@ const createPostBtnHeader = document.getElementById("publicar-btn");
 
 function irACrearPublicacion() {
 
+    const base = window.location.pathname.includes("/html/")
+        ? "../"
+        : "./";
+
     if (auth.currentUser) {
 
-        window.location.href = `${rutaHTML}html/create-post.html`;
+        window.location.href = `${base}html/create-post.html`;
 
     } else {
 
-        window.location.href = `${rutaHTML}login.html`;
+        window.location.href = `${base}html/login.html`;
 
     }
 
@@ -70,13 +74,17 @@ if (userSession) {
 
     userSession.addEventListener("click", () => {
 
+        const base = window.location.pathname.includes("/html/")
+            ? "../"
+            : "./";
+
         if (auth.currentUser) {
 
-            window.location.href = `${rutaHTML}profile.html`;
+            window.location.href = `${base}html/profile.html`;
 
         } else {
 
-            window.location.href = `${rutaHTML}login.html`;
+            window.location.href = `${base}html/login.html`;
 
         }
 
