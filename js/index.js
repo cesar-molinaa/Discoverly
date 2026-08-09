@@ -47,17 +47,18 @@ const postsGrid = document.querySelector(".posts-grid");
 
 const logo = document.getElementById("logo");
 
-if(logo) {
+if (logo) {
 
-   logo.addEventListener("click", () => {
+    logo.addEventListener("click", () => {
 
-        if (window.location.pathname.includes("/html/")) {
-            window.location.href = "../index.html#hero";
-        } else {
-            window.location.href = "index.html#hero";
-        }
+        const base = window.location.pathname.includes("/html/")
+            ? "../"
+            : "./";
+
+        window.location.href = `${base}index.html#hero`;
 
     });
+
 }
 
 
@@ -103,7 +104,7 @@ if(btnHamburguesa) {
     });
 
 
-    document.querySelectorAll(".mobile menu a").forEach(link => {
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
         link.addEventListener("click", () => {
 
             mobileMenu.classList.remove("active");
