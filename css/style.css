@@ -2489,6 +2489,11 @@ select.form-input{
 
 
 
+.profile-posts h2{
+    margin-bottom: 3rem;
+    color: white;
+}
+
 /*MENU CAMBIA*/
 
 @media (max-width: 1555px){
@@ -3053,6 +3058,14 @@ footer{
     min-height: auto;
 }
 
+.post-card .post-img .post-category{
+    font-size: .8rem;
+}
+
+.post-full .post-category{
+    font-size: .2rem;
+}
+
 .post-content p{
     font-size: .8rem;
 }
@@ -3495,13 +3508,22 @@ footer{
 
 
 
+
+
+
+
     .post-page{
         padding: 1rem 2rem;
+    }
+
+    .post-full .post-img{
+        min-height: 14rem ;
     }
 
     .post-full .post-content h2{
         font-size: 2.2rem;
     }
+
 
     .main-form main{
         padding: 1rem;
@@ -3537,4 +3559,58 @@ footer{
         font-size: .8rem;
     }
 
+
+
+    .profile-posts h2{
+        margin-bottom: 4rem;
+    }
+
+
+    #edit-profile-btn, #logout-btn{
+        font-size: .8rem;
+    }
+
+
+    #edit-profile-modal{
+        padding: 1rem;
+    }
+
+    .modal-content h2{
+        font-size: 2rem;
+    }
+
+    .modal-content label{
+        margin-top: .5rem;
+        font-size: .8rem;
+    }
+
+    .modal-content textarea, .modal-content input{
+        font-size: .6rem;
+    }
+    #fto-perfil-editar{
+        font-size: .8rem;
+        border: 2px dotted white;
+    }
+
+    #edit-photo-preview{
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+
+    .modal-buttons{
+        gap: 1rem;
+    }
+
+    #cancel-edit-btn, #save-edit-btn{
+        font-size: .8rem;
+        padding: .6rem .8rem;
+        width: auto;
+        height: auto;
+
+        margin-top: 1rem;
+
+    
+    }
 }
