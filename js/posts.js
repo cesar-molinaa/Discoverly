@@ -179,13 +179,22 @@ function mostrarPublicaciones(publicacionesAMostrar) {
 
     const user = card.querySelector(".post-user");
 
-    user.addEventListener("click", (e) => {
+    if (user) {
 
-        e.stopPropagation();
+        user.addEventListener("click", (e) => {
 
-        window.location.href = `profile.html?uid=${post.usuarioId}`;
+            e.stopPropagation();
 
-    });
+            if (!post.usuarioId) {
+                console.error("Este post no tiene usuarioId:", post);
+                return;
+            }
+
+            window.location.href = `profile.html?uid=${post.usuarioId}`;
+
+        });
+
+    }
 
 
 
