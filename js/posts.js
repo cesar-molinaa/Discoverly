@@ -43,6 +43,8 @@ async function cargarPublicaciones() {
 
     });
 
+    publicaciones.sort((a, b) => b.fecha - a.fecha);
+
     mostrarPublicaciones(publicaciones);
 
 }
