@@ -41,6 +41,80 @@ export const coloresCategorias = {
 const postsGrid = document.querySelector(".posts-grid");
 
 
+const categorias = document.querySelectorAll(".categorias .categoria-card");
+
+
+
+
+
+//CONTADORES POSTS POR CADA CATEGORIA EN CATEGORIA CARD
+
+
+async function cargarContadoresCategorias() {
+
+    const snapshot = await getDocs(collection(db, "publicaciones"));
+
+    const contadores = {};
+
+
+    Object.keys(coloresCategorias).forEach(categoria => {
+        contadores[categoria] = 0;
+    });
+
+
+    snapshot.forEach(documento => {
+
+        const post = documento.data();
+
+        if (post.categoria && contadores[post.categoria] !== undefined) {
+            contadores[post.categoria]++;
+        }
+
+    });
+
+
+    categorias.forEach(categoriaCard => {
+
+        const categoria = categoriaCard.id;
+
+        const cantidad = contadores[categoria] || 0;
+
+        const contador = categoriaCard.querySelector("p");
+
+        if (contador) {
+
+            contador.textContent =
+                `${cantidad} ${cantidad === 1 ? "publicación" : "publicaciones"}`;
+
+        }
+
+    });
+
+}
+
+cargarContadoresCategorias();
+
+
+
+
+categorias.forEach(categoriaCard => {
+
+    categoriaCard.addEventListener("click", () => {
+
+        const categoria = categoriaCard.id;
+
+        window.location.href = `html/posts.html?categoria=${categoria}`;
+
+    });
+
+});
+
+
+
+
+
+
+
 
 
 
@@ -275,3 +349,6 @@ async function cargarPublicacionesDestacadas() {
 
 
 cargarPublicacionesDestacadas();
+
+
+

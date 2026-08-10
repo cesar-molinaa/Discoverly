@@ -28,6 +28,12 @@ const noResults = document.getElementById("no-results");
 
 
 
+const params = new URLSearchParams(window.location.search);
+const categoriaURL = params.get("categoria");
+
+
+
+
 //CARGAR LAS PUBLICACIONES DE FIREBASE Y METERLAS EN PUBLICACIONES[]
 
 async function cargarPublicaciones() {
@@ -43,9 +49,23 @@ async function cargarPublicaciones() {
 
     });
 
-    publicaciones.sort((a, b) => b.fecha - a.fecha);
+    if (categoriaURL) {
 
-    mostrarPublicaciones(publicaciones);
+        const filtroCategoria = document.getElementById("filter-category");
+
+        if (filtroCategoria) {
+            filtroCategoria.value = categoriaURL;
+        }
+
+        filtrarPublicaciones();
+
+    } else {
+
+        publicaciones.sort((a, b) => b.fecha - a.fecha);
+
+        mostrarPublicaciones(publicaciones);
+
+    }
 
 }
 
