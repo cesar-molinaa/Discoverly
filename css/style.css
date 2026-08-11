@@ -1319,14 +1319,14 @@ input[type="file"]{
 
 .post-full{
     width:min(100%, 700px);
-    height: 80vh;
+    height: min(80vh, auto);
 
     box-shadow: 0 10px 30px #3B82F6;
 }
 
 
 .post-full .post-img{
-    height: 800px;
+    min-height: 20%;
     width: 100%;
     position: relative;
 }
